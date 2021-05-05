@@ -34,7 +34,7 @@ const updateHouse = (house) => {
       fulldesc = "${fulldesc}",
       picturePath = "${picturePath}"
     WHERE idhouse = ${idhouse};`;
-  connection.query(query); //not good
+  connection.query(query);
 };
 
 //delete a house
@@ -50,7 +50,7 @@ module.exports = {
   createHouse: createHouse,
   readAllHouses: readAllHouses,
   readHouse: readHouse,
-  updateHouse: updateHouse, //TODO
+  updateHouse: updateHouse,
   deleteHouse: deleteHouse,
   readHouseCategories: readHouseCategories,
   House: House,

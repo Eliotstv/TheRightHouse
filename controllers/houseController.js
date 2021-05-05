@@ -36,9 +36,9 @@ const postHouse = (req, res) => {
       picturePath
     );
     updateHouse(house);
-    res.status(200).json({ status: "ok" });
+    res.status(200).json({ status: "good" });
   } catch (err) {
-    res.send(err); // TODO CHECK
+    res.send(err);
   }
 };
 
