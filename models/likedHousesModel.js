@@ -6,9 +6,9 @@ const LikedHouse = (id) => {
   const query = `SELECT * FROM user INNER JOIN house WHERE user.iduser = house.idhouse VALUES (${iduser}, "${idhouse}");`;
   connection.query(query);
 };
+//these two const's are currently not in use
+const housesLikedByUser = "Return users then houses";
 
-const housesLikedByUser = "hieraan een user en dan houses returnen";
-
-const usersLikingHouse = "hieraan een house meegeven en dan users opzoeken";
+const usersLikingHouse = "Giving house and then look for users";
 
 module.exports = { LikedHouse: LikedHouse };

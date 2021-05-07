@@ -56,6 +56,8 @@ export default function installerCategories(app) {
           category: "Cosy",
           fulldesc: "This is very nice! This is very nice!",
         };
+        //another try and catch
+        //in the try action we will await a fetch from the API route (posthouse)
         try {
           const res = await fetch("/api/houses/postHouse", {
             body: JSON.stringify(values),

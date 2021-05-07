@@ -1,4 +1,4 @@
-/*Body css to display it with grid, this is the mobile section*/
+/*Body css to display it with grid, this is the size of a tablet*/
 body {
   display: grid;
   grid-gap: 20px;
@@ -45,7 +45,7 @@ body {
   margin: 1rem;
 }
 
-/*----------------------------------------------------------------------------------------*/
+/*---------Desktop dimensions with vue-------------------------------------------------------------------------------*/
 
 /*media statement for responsive use with a screen from minimum 980px*/
 @media screen and (min-width: 980px) {
@@ -129,7 +129,7 @@ body {
     text-align: center;
   }
 }
-/*----------------------------------------------------------------------------------------*/
+/*------Mobile screen----------------------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
   body {
     align-content: center;

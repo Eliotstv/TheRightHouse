@@ -8,7 +8,9 @@ class House {
     this.picturePath = picturePath;
   }
 }
-
+//exporting the HouseManagement
+//This is the html with directly an action to create a new house (the src link is the little "New" picture when we want to create a new house)
+//The putHouse action is to crate a new house
 export default function installerHouseManagement(app) {
   const templateHouseManagement = `
     <div class="mode">
@@ -42,7 +44,8 @@ export default function installerHouseManagement(app) {
     </div>
       
       `;
-
+  //Here we can see the two different modes (newHouse and editHouse)
+  //There is also a catch error if it isn't an editmode
   app.component("HouseManagement", {
     template: templateHouseManagement,
     methods: {
@@ -71,7 +74,7 @@ export default function installerHouseManagement(app) {
               "Content-Type": "application/json",
             },
           });
-
+          //Here we can see a house refreshing to see the results
           await this.refreshHouses();
 
           console.log(res);
@@ -80,6 +83,7 @@ export default function installerHouseManagement(app) {
           console.log(err);
         }
       },
+      //Here is the part to delete a house from the API and the host. The host in this case is the IP adress of the live server or localhost
       async deleteHouse() {
         const res = await fetch(host + "/api/houses/deleteHouse", {
           body: JSON.stringify({ id: this.currentHouse.idhouse }),
@@ -109,6 +113,7 @@ export default function installerHouseManagement(app) {
     async mounted() {
       await this.refreshHouses();
     },
+    //data are firstly null or filled with void to replace it with content
     data() {
       return {
         editMode: "newHouse",

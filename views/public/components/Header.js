@@ -1,3 +1,6 @@
+//exporting the Header
+//This is the Header html with a responsive burger menu feature
+//The 3th section of the html is the user click action tou change to the HouseManagement part
 export default function installerHeader(app) {
   const templateHeader = `
   <div class="Header">
